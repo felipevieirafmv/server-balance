@@ -1,10 +1,18 @@
-const express = require('express');
+const express = require("express");
+const cors = require("cors");
+
 const app = express();
 
-require('./startup/routes')(app);
+app.use(
+  cors({
+    origin: true,
+    methods: "GET,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+  })
+);
 
-const port = 8080;
+require("./startup/routes")(app);
 
-const server = app.listen(port, () => console.log(`Listening on port ${port}`));
-
-module.exports = server;
+const port = process.env.PORT || 8080;
+app.listen(port, () => console.log(`Server is running on port ${port}`));
