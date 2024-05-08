@@ -3,6 +3,9 @@
     "builds": [{ "src": "index.js", "use": "@vercel/node" }],
     "routes": [
         { "src": "/", "dest": "/" },
-        { "src": "/challenge", "dest": "/" }
+        { "src": "/challenge", "dest": "/" },
+        { "src": "/challenge/values", "dest": "/" },
+        { "src": "/challenge/begin", "dest": "/" },
+        { "src": "/challenge/end", "dest": "/" }
       ]
 }
