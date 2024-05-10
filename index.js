@@ -19,7 +19,7 @@ connectToDB();
 
 app.use(
   cors({
-    origin: true,
+    origin: "*",
     methods: "GET,POST,DELETE",
     preflightContinue: false,
     optionsSuccessStatus: 204
