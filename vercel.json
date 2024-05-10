@@ -1,17 +1,11 @@
 {
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": 
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-    }
-  ],
-    "version": 2,
-    "builds": [{ "src": "index.js", "use": "@vercel/node" }],
-    "routes": [
-        { "src": "/", "dest": "/" },
-        { "src": "/challenge", "dest": "/" },
-        { "src": "/challenge/begin", "dest": "/" },
-        { "src": "/challenge/end", "dest": "/" }
-      ]
+  "headers": { "key": "Access-Control-Allow-Origin", "value": "*" },
+  "version": 2,
+  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
+  "routes": [
+      { "src": "/", "dest": "/" },
+      { "src": "/challenge", "dest": "/" },
+      { "src": "/challenge/begin", "dest": "/" },
+      { "src": "/challenge/end", "dest": "/" }
+    ]
 }
